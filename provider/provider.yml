@@ -1,9 +1,8 @@
 spring:
     datasource:
-      password: root
-      username: root
-      url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/provider
+        url: jdbc:mysql://localhost/provider?createDatabaseIfNotExist=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: root
+        password: root
     jpa:
-      hibernate:
-        ddl-auto: update
-        
+        hibernate:
+            ddl-auto: create-drop
